@@ -2,14 +2,15 @@ import React from 'react';
 import './App.css';
 import Home from './pages/Home';
 import Map from './pages/Map';
+import Router from './routes'
 
 function App() {
-  return (
-    <div className="App">
-      {/*<Home></Home>*/}
+  return <Router/>;
+    {/*<div className="App">
+      <Home></Home>
       <Map></Map>
-    </div>
-  );
+    </div>*/}
+  ;
 }
 
 export default App;
