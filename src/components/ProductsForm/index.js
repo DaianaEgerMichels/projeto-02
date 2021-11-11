@@ -150,7 +150,7 @@ return(
 
             <option value={""} ></option>
 
-           {provider.map(state=> <option value={state}>{state}</option>)}
+           {provider.map((state)=> <option value={state}>{state}</option>)}
 
         </select>
     </div>
@@ -159,7 +159,7 @@ return(
 
             <option value={""} ></option>
 
-           {group.map(state=> <option value={state}>{state}</option>)}
+           {group.map((state)=> <option value={state}>{state}</option>)}
 
         </select>
     </div>
