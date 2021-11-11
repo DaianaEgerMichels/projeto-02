@@ -1,8 +1,7 @@
 import React from "react";
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
 import Main from "../../components/Main";
 import {MapContainer,TileLayer, Marker, Popup } from 'react-leaflet';
+import Header from "../../components/Header";
 
 const COMPANIES = [
     {
@@ -32,7 +31,7 @@ export default function Map(){
 
     return (
         <>
-        {/*<Header></Header>*/}
+        <Header></Header>
         <Main>
         <div className="container-map">  
 
@@ -54,7 +53,6 @@ export default function Map(){
 
         </div>
         </Main>
-        {/*<Footer></Footer>*/}
         </>
     )
 

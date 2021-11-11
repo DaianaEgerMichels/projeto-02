@@ -1,20 +1,17 @@
 import React from "react";
-import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Main from "../../components/Main";
+import ProductsForm from "../../components/ProductsForm";
 
 
 export default function Products(){
 
     return (
         <>
-            {/*<Header></Header>*/}
-
+            <Header></Header>
             <Main>
-             Cadastro de Produtos
+                <ProductsForm></ProductsForm>
             </Main>
-         
-            {/*<Footer></Footer>*/}
         </>
     )
 

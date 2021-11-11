@@ -6,15 +6,22 @@
   
     ],
     "fornecedores": [
-      "Del valle",
+      "Submarino",
       "Amazon",
-      "Dell"
+      "Americanas",
+      "Mercado Livre",
+      "Shopee",
+      "Magazine Luiza"
     ],
     "categorias": [
       "Carnes",
       "Ovos",
       "Higiene",
       "Cereais",
-      "Massas"
+      "Massas",
+      "Frutas",
+      "Verduras"
     ]
+    
+
   }

@@ -1,20 +1,19 @@
 import React from "react";
-import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Main from "../../components/Main";
 
+import CompaniesForm from "../../components/CompaniesForm";
+
 
 export default function Companies(){
-
+    
     return (
         <>
-            {/*<Header></Header>*/}
-
+            <Header></Header>
             <Main>
-             Cadastro de Empresas
+             <CompaniesForm></CompaniesForm>
             </Main>
          
-            {/*<Footer></Footer>*/}
         </>
     )
 

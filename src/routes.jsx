@@ -1,7 +1,6 @@
 import React from "react";
 import {BrowserRouter, Switch, Route} from "react-router-dom";
 import Footer from "./components/Footer";
-import Header from "./components/Header";
 import Home from "./pages/Home";
 import List from "./pages/List";
 import Products from "./pages/Products";
@@ -12,7 +11,6 @@ import Map from "./pages/Map";
 const Router = () => {
     return(
         <BrowserRouter>
-            <Header></Header>
             <Switch>
                 <Route exact path="/" component={Home}></Route>
                 <Route  path="/map" component={Map}></Route>
