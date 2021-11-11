@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import './ProductsForm.css'
-import {Link} from "react-router-dom";
+import {Link, useHistory} from "react-router-dom";
 
 
 const  ProductsForm= ()=>{
@@ -11,42 +11,41 @@ const  ProductsForm= ()=>{
     const [description, setDescription] = useState("");
     const [provider, setProvider] = useState([]);
     const [group, setGroup] = useState([]);
+    const history = useHistory();
 
     
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
 
-        //history.push("/list");}
-    
-        // api
-        event.target.checkValidity();
-        console.log("handleSubmit");
+        await fetch(
+          'http://localhost:3333/produtos',
+          {
+            headers: {
+             'Accept': 'application/json',
+              'Content-Type': 'application/json'
+            },
+            method: "POST",
+            body: JSON.stringify({
+            "url": url,
+            "name": name,
+            "unitCost": unitCost,
+            "description":description,
+            "provider": provider,
+            "group": group
+            })
+          }
+        );
 
-
-        //await fetch(
-            //'http://localhost:3333/login',
-           // {
-             // headers: {
-            //    'Accept': 'application/json',
-               // 'Content-Type': 'application/json'
-             // },
-            //  method: "POST",
-            //  body: JSON.stringify({
-             //   "email": email,
-             //   "password": password,
-             // })
-           // }
-         // );
-    
+       history.push("/list");
         
-        }
+    }
 
         useEffect(() => {
 
             async function getProviders() {
               const result = await fetch("http://localhost:3333/fornecedores");
               const data = await result.json();
-              console.log(data);
+              //console.log(data);
               setProvider(data);
             }
         
@@ -59,14 +58,13 @@ const  ProductsForm= ()=>{
             async function getGroups() {
               const result = await fetch("http://localhost:3333/categorias");
               const data = await result.json();
-              console.log(data);
+              //console.log(data);
               setGroup(data);
             }
         
             getGroups();
         
           }, []);
-
 
 
 return(

@@ -1,27 +1,25 @@
 {
-    "produtos": [
-  
-    ],
-    "empresas": [
-  
-    ],
-    "fornecedores": [
-      "Submarino",
-      "Amazon",
-      "Americanas",
-      "Mercado Livre",
-      "Shopee",
-      "Magazine Luiza"
-    ],
-    "categorias": [
-      "Carnes",
-      "Ovos",
-      "Higiene",
-      "Cereais",
-      "Massas",
-      "Frutas",
-      "Verduras"
-    ]
+  "produtos": [
+   
+  ],
+  "empresas": [
     
-
-  }
+  ],
+  "fornecedores": [
+    "Submarino",
+    "Amazon",
+    "Americanas",
+    "Mercado Livre",
+    "Shopee",
+    "Magazine Luiza"
+  ],
+  "categorias": [
+    "Carnes",
+    "Ovos",
+    "Higiene",
+    "Cereais",
+    "Massas",
+    "Frutas",
+    "Verduras"
+  ]
+}

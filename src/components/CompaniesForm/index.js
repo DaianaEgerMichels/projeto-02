@@ -1,6 +1,6 @@
 import './CompaniesForm.css'
 import React, {useState} from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const  CompaniesForm= ()=>{
 
@@ -16,35 +16,40 @@ const  CompaniesForm= ()=>{
     const [complement, setComplement] = useState("");
     const [latitude, setLatitude] = useState("");
     const [longitude, setLongitude] = useState("");
+    const history = useHistory();
 
     
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
 
-        //history.push("/map");}
-    
-        // api
-        //event.target.checkValidity();
-       // console.log("handleSubmit");
+        await fetch(
+          'http://localhost:3333/empresas',
+          {
+            headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+            },
+            method: "POST",
+            body: JSON.stringify({
+            "corporateName": corporateName,
+            "fantasyName": fantasyName,
+            "cnpj":cnpj,
+            "email":email,
+            "cep": cep,
+            "address": address,
+            "number": number,
+            "district": district,
+            "city": city,
+            "complement": complement,
+            "latitude": latitude,
+            "longitude": longitude
+            })
+          }
+        );
 
-
-        //await fetch(
-            //'http://localhost:3333/login',
-           // {
-             // headers: {
-            //    'Accept': 'application/json',
-               // 'Content-Type': 'application/json'
-             // },
-            //  method: "POST",
-            //  body: JSON.stringify({
-             //   "email": email,
-             //   "password": password,
-             // })
-           // }
-         // );
-    
+       history.push("/map");
         
-        }
+    }
 
 
 return(
@@ -59,7 +64,7 @@ return(
 
 </section>
 
-<section className="companie-name">
+<section className="company-name">
 
      <label for="corporate"> Razão Social</label>
 
