@@ -1,0 +1,154 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.form-products{
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 2;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    max-width: 700px;
+    min-height: 650px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 5px;
+}
+
+.header-form, .name-cost, .selects{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    gap: 5px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.header-form> h1{
+    font-family: 'Magista Brush','Times New Roman', Times, serif;
+    font-size: 27px;
+}
+
+#cancel{
+    background-color: rgba(119, 180, 180, 0.685);
+    color: rgb(100, 100, 100);
+}
+
+#cancel, .btn-salvar{
+    border-radius: 3px;
+    margin: 2px;
+    width: 90px;
+    height: 40px;
+}
+
+.image-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 200px;
+    margin: 0 auto;
+    grid-gap: 10px;
+    max-height: 150px;
+    visibility: collapse;
+    align-items: center;
+}
+
+.image-container.view{
+    visibility: visible;
+}
+
+.img-url{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.img-url> label{
+    text-align: justify;
+    padding-left: 30px;
+}
+
+input[name="url"]{
+    margin: 10px 25px;
+    width: 650px;
+    height: 30px;
+    padding-left: 7px;
+}
+
+input[name="name"], input[name="cost"], select{
+    max-width: 310px;
+    height: 30px;
+    padding-left: 7px;
+    margin-top: 12px;
+    
+}
+
+.description{
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 650px;
+    margin: 0 auto;
+    height: 140px;
+}
+
+.description> label{
+    text-align: justify;
+}
+
+.description> textarea{
+    text-align: justify;
+    padding-left: 7px;
+    padding-top: 7px;
+    width: 650px;
+    height: 90px;
+}
+
+.selects, .name-cost{
+    width: 650px;
+    height: 70px;
+    align-items: center;
+}
+
+.selects> div, .name-cost>div{
+    height: 70px;
+    width: 100%;
+    justify-content: space-evenly;
+    text-align: start;
+}
+
+div> select{
+    margin-top: 15px;
+    max-width: 320px;
+}
+
+
+
+@font-face {
+    font-family: 'Caviar Dreams';
+    src: url('../../fonts/CaviarDreams.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Magista Brush';
+    src: url('../../fonts/Magista\ Brush.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @media(max-width:600px){
+    header{
+        display: flex;
+        overflow: scroll;
+    }
+    .header-form, .name-cost{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+  }
+

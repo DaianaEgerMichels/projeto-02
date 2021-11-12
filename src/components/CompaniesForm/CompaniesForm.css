@@ -1,0 +1,173 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.form-companies{
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 2;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    max-width: 800px;
+    min-height: 850px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 5px;
+}
+
+.header-form{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: center;
+    gap: 5px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.header-form> h1{
+    font-family: 'Magista Brush','Times New Roman', Times, serif;
+    font-size: 27px;
+}
+
+#cancel{
+    background-color: rgba(119, 180, 180, 0.685);
+    color: rgb(100, 100, 100);
+}
+
+#cancel, .btn-salvar{
+    border-radius: 3px;
+    margin: 2px;
+    width: 90px;
+    height: 40px;
+}
+
+.company-name, .latitude-longitude{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: start;
+    gap: 15px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+input[name="corporate"], input[name="fantasy"], input[name="cnpj"],input[name="emailCompany"],input[name="latitude"],input[name="longitude"], input[name="number"], input[name="district"], input[name="city"]{
+    max-width: 350px;
+    height: 30px;
+    padding-left: 7px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+input[name="address"]{
+    max-width: 450px;
+    height: 30px;
+    padding-left: 7px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+input[name="cep"]{
+    max-width: 230px;
+    height: 30px;
+    padding-left: 7px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+input[name="complement"]{
+    max-width: 700px;
+    height: 30px;
+    padding-left: 7px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+/*.address-details{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: start;
+    gap: 15px;
+    justify-content: space-evenly;
+    align-items: center;
+}*/
+
+.address-details{
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: start;
+    gap: 15px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.cep-address, .number-district-city{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: start;
+    gap: 15px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.address{
+    grid-column: 2/3;
+}
+
+
+
+.complement{
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.description> label{
+    text-align: justify;
+}
+
+.description> textarea{
+    text-align: justify;
+    padding-left: 7px;
+    padding-top: 7px;
+    width: 650px;
+    height: 90px;
+}
+
+@font-face {
+    font-family: 'Caviar Dreams';
+    src: url('../../fonts/CaviarDreams.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Magista Brush';
+    src: url('../../fonts/Magista\ Brush.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @media(max-width:600px){
+    header{
+        display: flex;
+        overflow: scroll;
+    }
+    .header-form, .name-cost{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+  }
+

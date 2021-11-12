@@ -1,10 +1,16 @@
 {
   "produtos": [
-   
+    {
+      "url": "https://images.pexels.com/photos/10167623/pexels-photo-10167623.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "name": "Cookies",
+      "unitCost": "6,50",
+      "description": "Cookies crocante, sabor baunilha com gotas de chocolate",
+      "provider": "Americanas",
+      "group": "Biscoitos",
+      "id": 1
+    }
   ],
-  "empresas": [
-    
-  ],
+  "empresas": [],
   "fornecedores": [
     "Submarino",
     "Amazon",
@@ -20,6 +26,7 @@
     "Cereais",
     "Massas",
     "Frutas",
-    "Verduras"
+    "Verduras",
+    "Biscoitos"
   ]
 }
