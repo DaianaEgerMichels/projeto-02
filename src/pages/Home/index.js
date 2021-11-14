@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import Main from "../../components/Main";
 import {useHistory} from "react-router-dom";
+import "./Home.css"
 
 
 export default function Home(){
@@ -20,7 +21,6 @@ export default function Home(){
           else {
           if (!email.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)) {
             document.querySelector('#emailError').className = "error-msg error";
-            return;
           } 
           else {document.querySelector('#emailError').className = "error-msg"; }
 
@@ -48,29 +48,31 @@ export default function Home(){
                 <form onSubmit={handleSubmit} className="form-login">
                     <h1>Acessar o Sistema</h1>
                     
-                        <label for="email"> Email:</label>
-            
-                                <input
-                                type="text"
-                                name="email"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                                placeholder="exemplo@site.com">
-                                </input>
-       
-                        <span id="emailError" className="error-msg">Email inválido!</span>       
+                        <div className="email-login">
+                          <label for="emailLogin">Email:</label>
+                                  <input
+                                  type="text"
+                                  name="emailLogin"
+                                  value={email}
+                                  onChange={(e) => setEmail(e.target.value)}
+                                  placeholder="exemplo@site.com">
+                                  </input>
+                          <span id="emailError" className="error-msg">Email inválido!</span>
+                        </div>      
                         
-                        <label for="password"> Senha:</label>
-                            
-                                <input
-                                type="password"
-                                name="password"
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
-                                placeholder="Digite sua senha">
-                                </input>         
-                        
-                        <span id="passwordError" className="error-msg">Senha inválida!</span>
+                        <div className="password-login">
+                          <label for="password">Senha:</label>
+                          
+                                  <input
+                                  type="password"
+                                  name="password"
+                                  value={password}
+                                  onChange={(e) => setPassword(e.target.value)}
+                                  placeholder="Digite sua senha">
+                                  </input>
+                          
+                          <span id="passwordError" className="error-msg">Senha inválida!</span>
+                        </div>
 
                         <button type="submit" className="btn-login" >Entrar</button>
                

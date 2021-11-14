@@ -18,38 +18,82 @@ const  ProductsForm= ()=>{
 
     
   const handleSubmit = async (event) => {
-    event.preventDefault();
+      try {
+        event.preventDefault();
+        if(!url || !name || !description || !unitCost || !provider || !group){
+          alert('Por favor preencha todos os campos!')
+          if (!url){
+            document.querySelector('#imageProduct').className = "image-container";
+            document.querySelector('#urlError').className = "error-msg error";
+          }
+          if (url){
+          document.querySelector('#imageProduct').className = "image-container view";  
+          document.querySelector('#urlError').className = "error-msg"; 
+          }
+          if(!name) {
+          document.querySelector('#nameError').className = "error-msg error";
+          }
+          if (name){
+            document.querySelector('#nameError').className = "error-msg";
+          }
+          if(!unitCost){
+            document.querySelector('#costError').className = "error-msg error";
+          }
 
-    await fetch(
-      'http://localhost:3333/produtos',
-      {
-        headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-        },
-        method: "POST",
-        body: JSON.stringify({
-        "url": url,
-        "name": name,
-        "unitCost": unitCost,
-        "description":description,
-        "provider": provider,
-        "group": group
-        })
-      }
-    );
+          if(unitCost){
+            document.querySelector('#costError').className = "error-msg";
+          }
+          if(!description){
+            document.querySelector('#descriptionError').className = "error-msg error";
+          }
+          if(description){
+            document.querySelector('#descriptionError').className = "error-msg";
+            return;
+          }
+          
+        } else{
+          if (url && name && description && unitCost && provider && group)
 
-    Swal.fire({
-      position: 'top-end',
-      icon: 'success',
-      title: 'Produto cadastrado com sucesso',
-      showConfirmButton: false,
-      timer: 1500
-    })
+          {await fetch(
+            'http://localhost:3333/produtos',
+            {
+              headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+              },
+              method: "POST",
+              body: JSON.stringify({
+              "url": url,
+              "name": name,
+              "unitCost": unitCost,
+              "description":description,
+              "provider": provider,
+              "group": group
+              })
+            }
+          );
 
-    history.push("/list");
-        
+          Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Produto cadastrado com sucesso',
+            showConfirmButton: false,
+            timer: 2000
+          })
+      
+
+          history.push("/list");
+          }
+
+        }
     }
+
+    catch (error) {
+          alert('Desculpe pelo transtorno. Estamos trabalhando para resolver o problema!')
+    }
+      
+        
+  }
 
   useEffect(() => {
 
@@ -92,8 +136,10 @@ return(
 
   <section className="img-url">
     
-    {setUrl && <div className="image-container view"><img id="img" href={url} alt="Imagem do Produto" className="image-product"></img></div>} 
-    
+    {setUrl && <div id ="imageProduct" className="image-container view "><img id="img" src={url} 
+    alt={url} className="image-product"></img></div>}
+    {!setUrl &&<div id ="imageProduct" className="image-container"><img id="img" src={url} 
+    alt={url} className="image-product"></img></div>}
 
     <label for="url"> URL da Imagem</label>
 
@@ -104,7 +150,7 @@ return(
         onChange={(e) => setUrl(e.target.value)}
         placeholder="Coloque aqui a url">
       </input>
-
+      <span id="urlError" className="error-msg">Campo obrigatório!</span>
   </section>   
 
 
@@ -119,7 +165,7 @@ return(
           onChange={(e) => setName(e.target.value)}
           placeholder="Digite aqui o nome do produto">
           </input>
-          {!setName && <span id="nameError" className="error-msg error">Campo obrigatório!</span>}
+          <span id="nameError" className="error-msg">Campo obrigatório!</span>
      </div>   
 
      <div>
@@ -131,7 +177,7 @@ return(
           onChange={(e) => setUnitCost(e.target.value)}
           placeholder="Digite aqui o custo do produto">
           </input>
-          {!setUnitCost && <span id="costError" className="error-msg error">Campo obrigatório!</span>}
+          <span id="costError" className="error-msg">Campo obrigatório!</span>
      </div>    
 
   </section>
@@ -146,10 +192,10 @@ return(
             placeholder="Digite aqui uma breve descrição do produto">
             </textarea>
 
-            {!setDescription && <span id="descriptionError" className="error-msg error">Campo obrigatório!</span>} 
+            <span id="descriptionError" className="error-msg ">Campo obrigatório!</span> 
 
   </section>   
-
+<hr/>
   <section className="selects">
 
     <div><span>Fornecedor</span>
@@ -172,7 +218,11 @@ return(
     </div>
        
 
-  </section>       
+  </section>    
+
+  <div className="products-checked">
+    <Link to="/list"><button id="btn-checked">Produtos Cadastrados</button></Link>
+  </div>   
 
 </form>
 </>

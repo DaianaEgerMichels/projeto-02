@@ -17,6 +17,10 @@
     border-radius: 5px;
 }
 
+.form-companies>hr{
+    max-width: 700px;
+}
+
 .header-form{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -56,7 +60,10 @@
     align-items: center;
 }
 
-input[name="corporate"], input[name="fantasy"], input[name="cnpj"],input[name="emailCompany"],input[name="latitude"],input[name="longitude"], input[name="number"], input[name="district"], input[name="city"]{
+input[name="corporate"], input[name="fantasy"], input[name="cnpj"],
+input[name="emailCompany"],input[name="latitude"],input[name="longitude"], 
+input[name="number"], input[name="district"], input[name="city"]
+{
     max-width: 350px;
     height: 30px;
     padding-left: 7px;
@@ -88,7 +95,18 @@ input[name="complement"]{
     margin-bottom: 12px;
 }
 
-/*.address-details{
+
+.address-details{
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: start;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.number-district-city{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     max-width: 700px;
@@ -97,11 +115,12 @@ input[name="complement"]{
     gap: 15px;
     justify-content: space-evenly;
     align-items: center;
-}*/
+}
 
-.address-details{
+.cep-address{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     max-width: 700px;
     margin: 0 auto;
     text-align: start;
@@ -110,19 +129,11 @@ input[name="complement"]{
     align-items: center;
 }
 
-.cep-address, .number-district-city{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    max-width: 700px;
-    margin: 0 auto;
-    text-align: start;
-    gap: 15px;
-    justify-content: space-evenly;
-    align-items: center;
+.cep{
+    width: 240px;
 }
-
 .address{
-    grid-column: 2/3;
+    width: 440px;
 }
 
 

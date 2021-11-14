@@ -1,33 +1,24 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import Main from "../../components/Main";
 import {MapContainer,TileLayer, Marker, Popup } from 'react-leaflet';
 import Header from "../../components/Header";
 
-const COMPANIES = [
-    {
-      id: 1,
-      name: 'Empresa X',
-      coordinates: [51.505,-0.09]
-    },
-   {
-      id: 2,
-      name: 'Empresa Y',
-      coordinates: [11.505,-0.09]
-    },
-     {
-      id: 3,
-      name: 'Empresa XYTE',
-      coordinates: [13.505,-0.09]
-    },
-     {
-      id: 4,
-      name: 'Empresa Z',
-      coordinates: [12.505,-0.09]
-    }
-  ]
-
 
 export default function Map(){
+
+    const [companies, setCompanies] = useState([]);
+
+    useEffect(() => {
+
+        async function getCompanies() {
+          const result = await fetch("http://localhost:3333/empresas");
+          const data = await result.json();
+          setCompanies(data);
+        }
+            
+        getCompanies();
+            
+      }, []);
 
     return (
         <>
@@ -35,16 +26,20 @@ export default function Map(){
         <Main>
         <div className="container-map">  
 
-            <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
+            <MapContainer center={[-28.1632702, -48.9803306]} zoom={13} scrollWheelZoom={false}>
                 <TileLayer
                     attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
                  {
-                     COMPANIES.map(item => (
-                        <Marker position={item.coordinates}>
+                     companies.map(item => (
+                        <Marker position={[item.latitude, item.longitude]}>
                             <Popup>
-                                <p>Nome: {item.name}</p>
+                                <div className="popup-style">
+                                    <p>{`Razão Social: ${item.corporateName}`}</p>
+                                    <p>{`Nome Fantasia: ${item.fantasyName}`}</p>
+                                    <p>{`Endereço: ${item.address}, ${item.number}, ${item.district}, ${item.city}`}</p>
+                                </div>
                             </Popup>
                         </Marker>
                     ))

@@ -1,6 +1,7 @@
 import './CompaniesForm.css'
 import React, {useState} from "react";
 import { Link, useHistory } from "react-router-dom";
+import Swal from 'sweetalert2'
 
 const  CompaniesForm= ()=>{
 
@@ -20,37 +21,128 @@ const  CompaniesForm= ()=>{
 
     
     const handleSubmit = async (event) => {
-        event.preventDefault();
 
-        await fetch(
-          'http://localhost:3333/empresas',
-          {
-            headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-            },
-            method: "POST",
-            body: JSON.stringify({
-            "corporateName": corporateName,
-            "fantasyName": fantasyName,
-            "cnpj":cnpj,
-            "email":email,
-            "cep": cep,
-            "address": address,
-            "number": number,
-            "district": district,
-            "city": city,
-            "complement": complement,
-            "latitude": latitude,
-            "longitude": longitude
-            })
-          }
-        );
+        try{
+            event.preventDefault();
+            if(!corporateName || !fantasyName || !cnpj || !email || !cep || !address || !number || !district || !city || !latitude || !longitude){
+            alert('Por favor preencha os campos, apenas o complemento não é obrigatório!')
+            if(!corporateName) {
+            document.querySelector('#corporateError').className = "error-msg error";
+            }
+            if (corporateName){
+              document.querySelector('#corporateError').className = "error-msg";
+            }
+            if(!fantasyName){
+              document.querySelector('#fantasyError').className = "error-msg error";
+            }
+  
+            if(fantasyName){
+              document.querySelector('#fantasyError').className = "error-msg";
+            }
+            if(!cnpj){
+              document.querySelector('#cnpjError').className = "error-msg error";
+            }
+            if(cnpj){
+              document.querySelector('#cnpjError').className = "error-msg";
+              return;
+            }
+            if(!email){
+              document.querySelector('#emailError').className = "error-msg error";
+            }
+            if(email){
+              document.querySelector('#emailError').className = "error-msg";
+            }
+             if(!cep){
+              document.querySelector('#cepError').className = "error-msg error";
+            }
+            if(cep){
+              document.querySelector('#cepError').className = "error-msg";
+            }
+            if(!address){
+              document.querySelector('#addressError').className = "error-msg error";
+            }
+            if(address){
+              document.querySelector('#addressError').className = "error-msg";
+              return;
+            }
+             if(!number){
+              document.querySelector('#numberError').className = "error-msg error";
+            }
+            if(number){
+              document.querySelector('#numberError').className = "error-msg";
+            }
+            if(!district){
+              document.querySelector('#districtError').className = "error-msg error";
+            }
+            if(district){
+              document.querySelector('#districtError').className = "error-msg";
+            } if(!city){
+              document.querySelector('#cityError').className = "error-msg error";
+            }
+            if(city){
+              document.querySelector('#cityError').className = "error-msg";
+            } 
+            if(!latitude){
+              document.querySelector('#latitudeError').className = "error-msg error";
+            }
+            if(latitude){
+              document.querySelector('#latitudeError').className = "error-msg";
+            }
+            if(!longitude){
+              document.querySelector('#longitudeError').className = "error-msg error";
+            }
+            if(longitude){
+              document.querySelector('#longitudeError').className = "error-msg";
+              return;
+            }
+            
+          } else{
+            if (corporateName && fantasyName && cnpj && email && cep && address && number && district && city && latitude && longitude)
+  
+            {await fetch(
+                'http://localhost:3333/empresas',
+                {
+                  headers: {
+                  'Accept': 'application/json',
+                  'Content-Type': 'application/json'
+                  },
+                  method: "POST",
+                  body: JSON.stringify({
+                  "corporateName": corporateName,
+                  "fantasyName": fantasyName,
+                  "cnpj":cnpj,
+                  "email":email,
+                  "cep": cep,
+                  "address": address,
+                  "number": number,
+                  "district": district,
+                  "city": city,
+                  "complement": complement,
+                  "latitude": latitude,
+                  "longitude": longitude
+                  })
+                }
+              );
+      
+                
+          Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Empresa cadastrada com sucesso',
+            showConfirmButton: false,
+            timer: 2000
+          })
 
-       history.push("/map");
-        
+             history.push("/map");
+            
+  
+          }}}
+      
+  
+      catch (error) {
+            alert('Desculpe pelo transtorno. Estamos trabalhando para resolver o problema!')
+      }
     }
-
 
 return(
 <>
@@ -77,7 +169,7 @@ return(
             onChange={(e) => setCorporateName(e.target.value)}
             placeholder="Digite aqui a razão social">
             </input>
-            {!setCorporateName && <span id="corporateError" className="error-msg error">Campo obrigatório!</span>}
+            <span id="corporateError" className="error-msg ">Campo obrigatório!</span>
      </div>   
 
      <div>
@@ -89,7 +181,7 @@ return(
             onChange={(e) => setFantasyName(e.target.value)}
             placeholder="Digite aqui o nome fantasia">
             </input>
-            {!setFantasyName && <span id="fantasyError" className="error-msg error">Campo obrigatório!</span>}
+            <span id="fantasyError" className="error-msg">Campo obrigatório!</span>
      </div>  
 
      <div>
@@ -101,7 +193,7 @@ return(
             onChange={(e) => setCnpj(e.target.value)}
             placeholder="00.000.000/0000-00">
             </input>
-            {!setCnpj && <span id="cnpjError" className="error-msg error">Campo obrigatório!</span>}
+            <span id="cnpjError" className="error-msg">Campo obrigatório!</span>
      </div>    
 
      <div>
@@ -113,17 +205,18 @@ return(
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Digite aqui o email">
             </input>
-            {!setEmail && <span id="emailError" className="error-msg error">Campo obrigatório!</span>}
+            <span id="emailError" className="error-msg">Campo obrigatório!</span>
      </div>   
 
 </section>
 
+<hr/>
 
 <section className="address-details">
 
     
         <section className="cep-address">
-            <div>
+            <div className="cep">
                 <label for="cep">CEP</label>
                     <input
                     type="number"
@@ -132,7 +225,7 @@ return(
                     onChange={(e) => setCep(e.target.value)}
                     placeholder="00000-000">
                     </input>
-                    {!setCep && <span id="cepError" className="error-msg error">Campo obrigatório!</span>}
+                    <span id="cepError" className="error-msg">Campo obrigatório!</span>
             </div>
             <div className="address">
                 <label for="address"> Endereço</label>
@@ -143,12 +236,10 @@ return(
                     onChange={(e) => setAddress(e.target.value)}
                     placeholder="Digite aqui o endereço">
                     </input>
-                    {!setAddress && <span id="addressError" className="error-msg error">Campo obrigatório!</span>}
+                    <span id="addressError" className="error-msg">Campo obrigatório!</span>
             </div>
         </section>
  
-
-    
         <section className="number-district-city">
             <div>
                 <label for="number"> Número</label>
@@ -159,7 +250,7 @@ return(
                     onChange={(e) => setNumber(e.target.value)}
                     placeholder="Digite aqui o número">
                     </input>
-                    {!setNumber && <span id="numberError" className="error-msg error">Campo obrigatório!</span>}
+                    <span id="numberError" className="error-msg">Campo obrigatório!</span>
             </div>
             <div>
                 <label for="district"> Bairro</label>
@@ -170,7 +261,7 @@ return(
                     onChange={(e) => setDistrict(e.target.value)}
                     placeholder="Digite aqui o bairro">
                     </input>
-                    {!setDistrict && <span id="districtError" className="error-msg error">Campo obrigatório!</span>}
+                    <span id="districtError" className="error-msg">Campo obrigatório!</span>
             </div>
             <div>
                 <label for="city"> Cidade:</label>
@@ -181,7 +272,7 @@ return(
                     onChange={(e) => setCity(e.target.value)}
                     placeholder="Digite aqui a cidade">
                     </input>
-                    {!setCity && <span id="cityError" className="error-msg error">Campo obrigatório!</span>}
+                    <span id="cityError" className="error-msg">Campo obrigatório!</span>
             </div>
         </section>
   
@@ -200,7 +291,7 @@ return(
         </div>
 
 </section>  
-
+<hr/>
 <section className="latitude-longitude">
 
         <div>
@@ -212,7 +303,7 @@ return(
                 onChange={(e) => setLatitude(e.target.value)}
                 placeholder="Informe aqui a latitude">
                 </input>
-                {!setLatitude && <span id="latitudeError" className="error-msg error">Campo obrigatório!</span>}
+                <span id="latitudeError" className="error-msg">Campo obrigatório!</span>
         </div>
 
         <div>
@@ -224,7 +315,7 @@ return(
                 onChange={(e) => setLongitude(e.target.value)}
                 placeholder="Informe aqui a longitude">
                 </input>
-                {!setLongitude && <span id="longitudeError" className="error-msg error">Campo obrigatório!</span>}
+                <span id="longitudeError" className="error-msg">Campo obrigatório!</span>
         </div>
 
 </section>       

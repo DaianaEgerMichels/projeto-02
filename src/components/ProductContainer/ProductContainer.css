@@ -1,0 +1,68 @@
+.product-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-shrink: 2;
+    width: 180px;
+    height: 250px;
+    border-radius: 5px;
+    box-shadow:  rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border: 1px solid rgba(44, 56, 55, 0.575);
+    margin: 0 auto;
+}
+
+#image-product{
+    display: flex;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border: 1px solid gray;
+}
+
+#details-product{
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 2;
+    justify-content: space-evenly;
+    max-width: 170px;
+    max-height: 100px;
+}
+
+#details-product>h2{
+    font-family: 'Magista Brush','Times New Roman', Times, serif;
+    font-size: 19px;
+    color: rgb(39, 39, 39);
+    text-align: center;
+}
+
+#details-product>h4{
+    font-size: 14px;
+    text-align: justify;
+}
+
+#details-product>h4, #details-product>p{
+    font-family: 'Caviar Dreams','Times New Roman', Times, serif;
+    color: rgb(17, 17, 17);
+}
+
+#details-product>p{
+    font-size: 12px;
+    text-align: start;
+}
+
+
+/*@font-face {
+    font-family: 'Caviar Dreams';
+    src: url('../../fonts/CaviarDreams.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Magista Brush';
+    src: url('../../fonts/Magista\ Brush.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }*/

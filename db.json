@@ -8,25 +8,136 @@
       "provider": "Americanas",
       "group": "Biscoitos",
       "id": 1
+    },
+    {
+      "url": "https://images.pexels.com/photos/4038780/pexels-photo-4038780.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "name": "Morango",
+      "unitCost": "7,00",
+      "description": "Fruta saborosa com baixo carboidrato",
+      "provider": "Agricultor Familiar",
+      "group": "Frutas",
+      "id": 2
+    },
+    {
+      "url": "https://images.pexels.com/photos/9463780/pexels-photo-9463780.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "name": "Avelã",
+      "unitCost": "15,00",
+      "description": "Oleagenosa rica em nutrientes",
+      "provider": "Shopee",
+      "group": "Grãos",
+      "id": 3
+    },
+    {
+      "url": "https://images.pexels.com/photos/161514/brocoli-vegetables-salad-green-161514.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "name": "Brócolis",
+      "unitCost": "3,50",
+      "description": "Alimento natural, rico em vitaminas e minerais",
+      "provider": "Agricultor Familiar",
+      "group": "Verduras",
+      "id": 4
+    },
+    {
+      "url": "https://images.pexels.com/photos/3017107/pexels-photo-3017107.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "name": "Abóbora",
+      "unitCost": "5,00",
+      "description": "Alimento rico em proteínas",
+      "provider": "Agricultor Familiar",
+      "group": "Outra Categoria",
+      "id": 5
+    },
+    {
+      "url": "https://images.pexels.com/photos/6287348/pexels-photo-6287348.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "name": "Macarrão",
+      "unitCost": "5,00",
+      "description": "Massa para cozinhar",
+      "provider": "Mercado Livre",
+      "group": "Massas",
+      "id": 6
+    },
+    {
+      "url": "https://images.pexels.com/photos/2619967/pexels-photo-2619967.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "name": "Pizza",
+      "unitCost": "20,00",
+      "description": "Pizza pronta para assar",
+      "provider": "Outro Fornecedor",
+      "group": "Massas",
+      "id": 7
+    },
+    {
+      "url": "https://images.pexels.com/photos/2147637/pexels-photo-2147637.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "name": "Talheres de Madeira",
+      "unitCost": "15,00",
+      "description": "Talheres de madeira para preparo de refeições",
+      "provider": "Amazon",
+      "group": "Utensílios",
+      "id": 8
     }
   ],
-  "empresas": [],
+  "empresas": [
+    {
+      "corporateName": "Supermencado Michels LTDA",
+      "fantasyName": "Mercado Michels",
+      "cnpj": "13.435.553/0001-19",
+      "email": "michelssupermercado@gmail.com",
+      "cep": "88765000",
+      "address": "Rua Germano Effting",
+      "number": "35",
+      "district": "Centro",
+      "city": "São Martinho",
+      "complement": "",
+      "latitude": "-28.1632702",
+      "longitude": "-48.9803306",
+      "id": 1
+    },
+    {
+      "corporateName": "SDB Comercio de Alimentos LTDA",
+      "fantasyName": "Fort Atacadista",
+      "cnpj": "09.477.652/0065-50",
+      "email": "fortatacadista.com.br",
+      "cep": "88704296",
+      "address": "Marginal da BR101 Km 335",
+      "number": "00",
+      "district": "Humaitá",
+      "city": "Tubarão",
+      "complement": "Ao lado da Delupo",
+      "latitude": "-28.4723189",
+      "longitude": "-49.0188725",
+      "id": 2
+    },
+    {
+      "corporateName": "Líder Comercio de Alimentos LTDA",
+      "fantasyName": "Líder Atacadista",
+      "cnpj": "01.255.841/0001-68",
+      "email": "lideratacadista.com.br",
+      "cep": "88745000",
+      "address": "Rua José Anastácio Teixeira",
+      "number": "70",
+      "district": "Alvorada",
+      "city": "Capivari de Baixo",
+      "complement": "Próximo a BR101",
+      "latitude": "-28.438935",
+      "longitude": "-48.961428",
+      "id": 3
+    }
+  ],
   "fornecedores": [
     "Submarino",
     "Amazon",
     "Americanas",
     "Mercado Livre",
     "Shopee",
-    "Magazine Luiza"
+    "Agricultor Familiar",
+    "Outro Fornecedor"
   ],
   "categorias": [
     "Carnes",
-    "Ovos",
-    "Higiene",
+    "Grãos",
+    "Utensílios",
     "Cereais",
     "Massas",
     "Frutas",
     "Verduras",
-    "Biscoitos"
+    "Biscoitos",
+    "Outra Categoria"
   ]
 }
