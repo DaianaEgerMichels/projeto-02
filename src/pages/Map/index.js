@@ -35,11 +35,9 @@ export default function Map(){
                      companies.map(item => (
                         <Marker position={[item.latitude, item.longitude]}>
                             <Popup>
-                                <div className="popup-style">
                                     <p>{`Razão Social: ${item.corporateName}`}</p>
                                     <p>{`Nome Fantasia: ${item.fantasyName}`}</p>
                                     <p>{`Endereço: ${item.address}, ${item.number}, ${item.district}, ${item.city}`}</p>
-                                </div>
                             </Popup>
                         </Marker>
                     ))

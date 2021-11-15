@@ -15,22 +15,21 @@ export default function Home(){
         try {
           event.preventDefault();
 
-          if(!email || !password){
+          if(!email || !password.length){
           alert('Email e senha são obrigatórios')
-          } 
-          else {
           if (!email.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)) {
             document.querySelector('#emailError').className = "error-msg error";
           } 
-          else {document.querySelector('#emailError').className = "error-msg"; }
+          if(email.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)) 
+          {document.querySelector('#emailError').className = "error-msg";}
 
-          if (password.length < 6) {
+          if (password.length <6) {
             document.querySelector('#passwordError').className = "error-msg error";
-            return;
           }
-          else {document.querySelector('#passwordError').className = "error-msg"; }
-
-          history.push("/map");
+          else {document.querySelector('#passwordError').className = "error-msg"; return;}
+          } 
+          else { if(email && password.length>=6){
+          history.push("/map");}
           }
         
         }

@@ -1,7 +1,7 @@
 import React from "react";
 import "./ProductContainer.css"
 
-const ProductContainer = (url,name, description, unitCost, provider,group )=>{
+const ProductContainer = ({url,name, description, unitCost, provider,group} )=>{
     return(
         
         <section className="product-container" >
