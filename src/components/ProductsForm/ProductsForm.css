@@ -15,11 +15,13 @@
     min-height: 750px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     border-radius: 5px;
+    gap:20px;
+    padding: 10px;
 }
 
 .header-form, .name-cost, .selects{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction:row;
     max-width: 700px;
     margin: 0 auto;
     text-align: center;
@@ -46,8 +48,8 @@
 }
 
 .image-container{
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction:row;
     width: 120px;
     margin: 0 auto;
     grid-gap: 10px;
@@ -140,14 +142,14 @@ div> select{
     font-style: normal;
   }
   
-  @font-face {
+@font-face {
     font-family: 'Magista Brush';
     src: url('../../fonts/Magista\ Brush.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-  }
+}
 
-  @media(max-width:600px){
+/*@media(max-width:600px){
     header{
         display: flex;
         overflow: scroll;
@@ -156,16 +158,16 @@ div> select{
         display: grid;
         grid-template-columns: 1fr;
     }
-  }
+  }*/
 
-  hr{
+hr{
       background: gray;
       max-width: 650px;
       height: 1px;
       margin: 0 auto;
-  }
+}
 
-  #btn-checked{
+#btn-checked{
       text-align: center;
       margin: 15px;
       border-radius: 3px;
@@ -173,9 +175,9 @@ div> select{
       width: 200px;
       height: 35px;
 
-  }
+}
 
-  .products-checked{
+.products-checked{
       display: flex;
       flex-wrap: wrap;
       flex-shrink: 2;
@@ -186,4 +188,4 @@ div> select{
       width: 220px;
       height: 50px;
       margin: 0 auto;
-  }
+}

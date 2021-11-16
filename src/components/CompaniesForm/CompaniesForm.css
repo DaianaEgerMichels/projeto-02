@@ -22,8 +22,8 @@
 }
 
 .header-form{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: row;
     max-width: 750px;
     margin: 0 auto;
     text-align: center;
@@ -49,9 +49,20 @@
     height: 40px;
 }
 
-.company-name, .latitude-longitude{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+.container-dados{
+    display: flex;
+    flex-direction:column;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: start;
+    gap: 15px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.company-name, .cnpj-email, .latitude-longitude{
+    display: flex;
+    flex-direction:row;
     max-width: 700px;
     margin: 0 auto;
     text-align: start;
@@ -107,8 +118,8 @@ input[name="complement"]{
 }
 
 .number-district-city{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction:row;
     max-width: 700px;
     margin: 0 auto;
     text-align: start;
@@ -139,8 +150,8 @@ input[name="complement"]{
 
 
 .complement{
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction:column;
     max-width: 700px;
     margin: 0 auto;
 }
@@ -171,7 +182,7 @@ input[name="complement"]{
     font-style: normal;
   }
 
-  @media(max-width:600px){
+ /* @media(max-width:600px){
     header{
         display: flex;
         overflow: scroll;
@@ -180,5 +191,5 @@ input[name="complement"]{
         display: grid;
         grid-template-columns: 1fr;
     }
-  }
+  }*/
 

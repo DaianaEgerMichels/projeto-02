@@ -158,8 +158,9 @@ return(
 
 </section>
 
-<section className="company-name">
+<section className="container-dados">
 
+     <section className="company-name">
      <div>
          <label for="corporate">Razão Social</label>
             <input
@@ -183,7 +184,8 @@ return(
             </input>
             <span id="fantasyError" className="error-msg">Campo obrigatório!</span>
      </div>  
-
+     </section>
+    <section className="cnpj-email">
      <div>
          <label for="cnpj">CNPJ</label>
             <input
@@ -207,7 +209,7 @@ return(
             </input>
             <span id="emailError" className="error-msg">Campo obrigatório!</span>
      </div>   
-
+    </section>
 </section>
 
 <hr/>

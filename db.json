@@ -71,6 +71,15 @@
       "provider": "Amazon",
       "group": "Utensílios",
       "id": 8
+    },
+    {
+      "url": "https://images.pexels.com/photos/2959303/pexels-photo-2959303.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "name": "Ovos Caipira",
+      "unitCost": "4,00",
+      "description": "Meia dúzia de ovos caipira",
+      "provider": "Agricultor Familiar",
+      "group": "Outra Categoria",
+      "id": 9
     }
   ],
   "empresas": [
@@ -118,6 +127,21 @@
       "latitude": "-28.438935",
       "longitude": "-48.961428",
       "id": 3
+    },
+    {
+      "corporateName": "Supermercado Warmiling LTDA",
+      "fantasyName": "Mercado Warmiling",
+      "cnpj": "01.234.567/0001-89",
+      "email": "warmilingsupermercado@warmiling.com",
+      "cep": "88765000",
+      "address": "Avenida Frederico Schumacker",
+      "number": "159",
+      "district": "Centro ",
+      "city": "São Martinho ",
+      "complement": "Ao lado da Câmara Municipal de Vereadores",
+      "latitude": "-28.1650783",
+      "longitude": "-48.9809802",
+      "id": 4
     }
   ],
   "fornecedores": [

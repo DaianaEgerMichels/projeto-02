@@ -7,4 +7,11 @@
     max-width: 800px;
     align-items: center;
     text-align: center;
+    gap:15px;
+    margin: 20px;
+}
+
+.list-products>h1{
+    font-size: 30px;
+    font-family: 'Magista Brush','Times New Roman', Times, serif;
 }

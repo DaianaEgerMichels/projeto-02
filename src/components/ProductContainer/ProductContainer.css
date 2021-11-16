@@ -4,21 +4,27 @@
     align-items: center;
     justify-content: space-evenly;
     flex-shrink: 2;
-    width: 180px;
-    height: 250px;
+    width: 210px;
+    height: 290px;
     border-radius: 5px;
     box-shadow:  rgba(0, 0, 0, 0.1) 0px 4px 12px;
     border: 1px solid rgba(44, 56, 55, 0.575);
     margin: 0 auto;
+    padding: 5px;
 }
 
 #image-product{
     display: flex;
     align-items: center;
+    width: 101px;
+    height: 101px;
+    margin: 0 auto;
+}
+
+#image-product>img{
     width: 100px;
     height: 100px;
-    margin: 0 auto;
-    border: 1px solid gray;
+    border-radius: 4px;
 }
 
 #details-product{
@@ -26,8 +32,8 @@
     flex-direction: column;
     flex-shrink: 2;
     justify-content: space-evenly;
-    max-width: 170px;
-    max-height: 100px;
+    max-width: 190px;
+    max-height: 180px;
 }
 
 #details-product>h2{
@@ -40,6 +46,8 @@
 #details-product>h4{
     font-size: 14px;
     text-align: justify;
+    font-style: italic;
+    margin-bottom: 3px;
 }
 
 #details-product>h4, #details-product>p{
@@ -48,21 +56,7 @@
 }
 
 #details-product>p{
-    font-size: 12px;
+    font-size: 11px;
     text-align: start;
 }
 
-
-/*@font-face {
-    font-family: 'Caviar Dreams';
-    src: url('../../fonts/CaviarDreams.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Magista Brush';
-    src: url('../../fonts/Magista\ Brush.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }*/
