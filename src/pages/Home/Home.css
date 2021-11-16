@@ -1,7 +1,6 @@
 .form-login{
     display: flex;
     flex-direction: column;
-    flex-shrink: 2;
     flex-wrap: wrap;
     align-items: center;
     align-content: center;
@@ -42,7 +41,6 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-evenly;
-    flex-shrink: 2;
     flex-wrap: wrap;
     max-height: 350px;
     text-align: start;
@@ -64,3 +62,28 @@
     font-weight: normal;
     font-style: normal;
 }
+
+@media (max-width:750px){
+    .form-login{
+        max-width: 350px;
+        min-height: 300px;
+        margin: 0 auto;
+        padding: 8px;
+    }
+    .form-login>h1{
+      font-size: 21px;
+    }
+    .email-login, .password-login{
+        font-size: 14px;
+    }
+    .email-login>input[name="emailLogin"], 
+    .password-login>input[name="password"]{
+        max-width: 330px;
+        height: 20px;
+    }
+    .btn-login{
+        width: 90px;
+        height: 20px;
+        font-size: 14px;
+    }
+  }
