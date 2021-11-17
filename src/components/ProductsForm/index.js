@@ -163,7 +163,7 @@ return(
           name="name"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          placeholder="Digite aqui o nome do produto">
+          placeholder="Nome do produto">
           </input>
           <span id="nameError" className="error-msg">Campo obrigatório!</span>
      </div>   
@@ -175,7 +175,7 @@ return(
           name="cost"
           value={unitCost}
           onChange={(e) => setUnitCost(e.target.value)}
-          placeholder="Digite aqui o custo do produto">
+          placeholder="Custo do produto">
           </input>
           <span id="costError" className="error-msg">Campo obrigatório!</span>
      </div>    

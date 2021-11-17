@@ -8,24 +8,27 @@
 .form-companies{
     display: flex;
     flex-direction: column;
-    flex-shrink: 2;
-    flex-wrap: wrap;
     justify-content: space-evenly;
     max-width: 800px;
-    min-height: 850px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     border-radius: 5px;
+    font-size: 16px;
+    padding: 15px;
+    gap:10px;
+    margin: 0 auto;
 }
 
 .form-companies>hr{
-    max-width: 700px;
+    background: gray;
+      max-width: 650px;
+      height: 1px;
+      margin: auto;
 }
 
 .header-form{
     display: flex;
     flex-direction: row;
     max-width: 750px;
-    margin: 0 auto;
     text-align: center;
     gap: 5px;
     justify-content: space-evenly;
@@ -53,9 +56,9 @@
     display: flex;
     flex-direction:column;
     max-width: 700px;
-    margin: 0 auto;
+    margin:auto;
     text-align: start;
-    gap: 15px;
+    gap: 5px;
     justify-content: space-evenly;
     align-items: center;
 }
@@ -64,30 +67,37 @@
     display: flex;
     flex-direction:row;
     max-width: 700px;
-    margin: 0 auto;
+    margin:auto;
     text-align: start;
-    gap: 15px;
-    justify-content: space-evenly;
+    gap: 5px;
+    justify-content: space-between;
     align-items: center;
 }
 
 input[name="corporate"], input[name="fantasy"], input[name="cnpj"],
-input[name="emailCompany"],input[name="latitude"],input[name="longitude"], 
-input[name="number"], input[name="district"], input[name="city"]
+input[name="emailCompany"],input[name="latitude"],input[name="longitude"]
 {
-    max-width: 350px;
+    max-width: 340px;
     height: 30px;
     padding-left: 7px;
-    margin-top: 12px;
-    margin-bottom: 12px;
+    margin-top: 13px;
+    margin-bottom: 13px;
+}
+
+input[name="number"], input[name="district"], input[name="city"]{
+    max-width: 255px;
+    height: 30px;
+    padding-left: 7px;
+    margin-top: 13px;
+    margin-bottom: 13px;
 }
 
 input[name="address"]{
-    max-width: 450px;
+    max-width: 440px;
     height: 30px;
     padding-left: 7px;
-    margin-top: 12px;
-    margin-bottom: 12px;
+    margin-top: 13px;
+    margin-bottom: 13px;
 }
 
 input[name="cep"]{
@@ -102,8 +112,8 @@ input[name="complement"]{
     max-width: 700px;
     height: 30px;
     padding-left: 7px;
-    margin-top: 12px;
-    margin-bottom: 12px;
+    margin-top: 13px;
+    margin-bottom: 13px;
 }
 
 
@@ -111,7 +121,7 @@ input[name="complement"]{
     display: flex;
     flex-direction: column;
     max-width: 700px;
-    margin: 0 auto;
+    margin: auto;
     text-align: start;
     justify-content: space-evenly;
     align-items: center;
@@ -121,75 +131,147 @@ input[name="complement"]{
     display: flex;
     flex-direction:row;
     max-width: 700px;
-    margin: 0 auto;
+    margin:auto;
     text-align: start;
-    gap: 15px;
-    justify-content: space-evenly;
+    gap: 5px;
+    justify-content: space-between;
     align-items: center;
 }
 
 .cep-address{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     max-width: 700px;
-    margin: 0 auto;
+    margin: auto;
     text-align: start;
-    gap: 15px;
-    justify-content: space-evenly;
+    gap: 5px;
+    justify-content: space-between;
     align-items: center;
 }
 
 .cep{
-    width: 240px;
+    max-width: 240px;
 }
 .address{
-    width: 440px;
+    max-width: 440px;
 }
-
-
 
 .complement{
     display: flex;
     flex-direction:column;
     max-width: 700px;
-    margin: 0 auto;
+    margin:auto;
 }
 
-.description> label{
-    text-align: justify;
+@media (max-width:800px){
+    .main{
+        max-width: 800px;
+    }
+    .form-companies{
+        max-width:700px;
+        font-size: 14px;
+    }
+    
+    .container-dados,.company-name, .cnpj-email, .latitude-longitude,.address-details, .number-district-city,.cep-address,.complement{
+        font-size: 14px;
+        max-width: 600px;
+    }
+    .cep{
+        max-width: 200px;
+    }
+    .address{
+        max-width: 400px;
+    }
+    input[name="corporate"], input[name="fantasy"], input[name="cnpj"],
+    input[name="emailCompany"],input[name="latitude"],input[name="longitude"] 
+    {
+        font-size: 12px;
+        max-width: 275px;
+    }
+    input[name="number"], input[name="district"], input[name="city"]{
+        font-size: 12px;
+        max-width: 200px;
+    }
+    input[name="address"]{
+        max-width: 400px;
+        font-size: 12px;
+    }
+    input[name="cep"]{
+        max-width: 200px;
+        font-size: 12px;
+    }
+    input[name="complement"]{
+        max-width: 600px;
+        font-size: 12px;
+    }
+    .form-companies>hr{
+        max-width: 550px;
+    }
 }
 
-.description> textarea{
-    text-align: justify;
-    padding-left: 7px;
-    padding-top: 7px;
-    width: 650px;
-    height: 90px;
+
+@media (max-width:670px){
+    .main{
+        max-width: 670px;
+    }
+    .form-companies{
+        max-width:550px;
+        font-size: 12px;
+    }
+    .container-dados,.company-name, .cnpj-email, .latitude-longitude,.address-details, .number-district-city,.cep-address,.complement{
+        font-size: 11px;
+        max-width: 500px;
+    }
+    .cep{
+        max-width: 130px;
+    }
+    .address{
+        max-width: 370px;
+    }
+    input[name="corporate"], input[name="fantasy"], input[name="cnpj"],
+    input[name="emailCompany"],input[name="latitude"],input[name="longitude"] 
+    {
+        font-size: 11px;
+        max-width: 225px;
+        height: 25px;
+    }
+    input[name="number"], input[name="district"], input[name="city"]{
+        font-size: 11px;
+        max-width: 165px;
+        height: 25px;
+    }
+    input[name="address"]{
+        max-width: 330px;
+        font-size: 11px;
+        height: 25px;
+    }
+    input[name="cep"]{
+        max-width: 170px;
+        font-size: 11px;
+        height: 25px;
+    }
+    input[name="complement"]{
+        max-width: 500px;
+        font-size: 11px;
+    }
+    .form-companies>hr{
+        max-width: 485px;
+    }
+   
+    
 }
 
-@font-face {
-    font-family: 'Caviar Dreams';
-    src: url('../../fonts/CaviarDreams.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Magista Brush';
-    src: url('../../fonts/Magista\ Brush.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-
- /* @media(max-width:600px){
-    header{
+@media(max-width:450px){
+    .form-companies>.number-district-city>.error-msg, .error-msg.error{
         display: flex;
-        overflow: scroll;
-    }
-    .header-form, .name-cost{
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-  }*/
+        flex-wrap: wrap;
+        max-width: 99px;
+        height: auto;
+        font-size: 11px;
+        padding: 2px;
+      }
+}
+
+
+
 

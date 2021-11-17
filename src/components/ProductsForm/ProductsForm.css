@@ -8,22 +8,20 @@
 .form-products{
     display: flex;
     flex-direction: column;
-    flex-shrink: 2;
-    flex-wrap: wrap;
     justify-content: space-evenly;
     max-width: 700px;
-    min-height: 750px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     border-radius: 5px;
-    gap:20px;
-    padding: 10px;
+    gap:15px;
+    padding: 20px;
+    margin: 10px auto;
+    font-size: 16px;
 }
 
-.header-form, .name-cost, .selects{
+.header-form{
     display: flex;
     flex-direction:row;
-    max-width: 700px;
-    margin: 0 auto;
+    max-width: 650px;
     text-align: center;
     gap: 5px;
     justify-content: space-evenly;
@@ -32,7 +30,7 @@
 
 .header-form> h1{
     font-family: 'Magista Brush','Times New Roman', Times, serif;
-    font-size: 27px;
+    font-size: 29px;
 }
 
 #cancel{
@@ -50,18 +48,22 @@
 .image-container{
     display: flex;
     flex-direction:row;
-    width: 120px;
-    margin: 0 auto;
-    grid-gap: 10px;
-    height: 120px;
+    max-width: 120px;
+    margin: 10px;
+    gap:7px;
+    max-height: 120px;
     visibility: hidden;
     align-items: center;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
 
 .image-container.view {
     visibility: visible;
+}
+.image-container>img{
+    max-height: 115px;
+    gap:5px;
 }
 
 .img-url{
@@ -69,123 +71,206 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    gap:10px;
+    gap:5px;
+    max-width: 650px;
+    margin: auto;
 }
 
 .img-url> label{
-    text-align: justify;
-    padding-left: 30px;
+    text-align: left;
 }
 
 input[name="url"]{
     margin: 10px 25px;
-    width: 640px;
+    max-width: 640px;
     height: 30px;
     padding-left: 7px;
 }
 
 input[name="name"], input[name="cost"], select{
-    width: 315px;
+    max-width: 310px;
     height: 30px;
     padding-left: 7px;
-    margin-top: 12px;
-    margin-bottom: 12px;
+    margin-top: 13px;
+    margin-bottom: 13px;
     
 }
 
-.description{
-    display: grid;
-    grid-template-columns: 1fr;
+.name-cost{
+    display: flex;
+    flex-direction:row;
     max-width: 650px;
-    margin: 0 auto;
-    height: 140px;
+    margin: auto;
+    text-align: start;
+    gap: 5px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+    max-width: 650px;
+    height: auto;
+    gap: 5px;
+    margin: auto;
 }
 
 .description> label{
-    text-align: justify;
+    text-align: flex-start;
 }
 
 .description> textarea{
     text-align: justify;
     padding: 7px;
-    width: 650px;
-    height: 90px;
+    max-width: 100%;
     margin-bottom: 7x;
     margin-top: 10px;
+    resize: none;
 }
 
-
-.selects, .name-cost{
-    width: 650px;
-    height: 70px;
+.selects{
+    display: flex;
+    flex-direction:row;
+    max-width: 650px;
+    margin: auto;
+    text-align: start;
+    gap: 5px;
+    justify-content: space-between;
     align-items: center;
 }
 
-.selects> div, .name-cost>div{
-    min-height: 70px;
-    width: 100%;
-    justify-content: space-evenly;
-    text-align: start;
-}
-
-div> select{
-    margin-top: 15px;
-    max-width: 320px;
-}
-
-
-
-@font-face {
-    font-family: 'Caviar Dreams';
-    src: url('../../fonts/CaviarDreams.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-@font-face {
-    font-family: 'Magista Brush';
-    src: url('../../fonts/Magista\ Brush.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/*@media(max-width:600px){
-    header{
-        display: flex;
-        overflow: scroll;
-    }
-    .header-form, .name-cost{
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-  }*/
-
 hr{
       background: gray;
-      max-width: 650px;
+      max-width: 600px;
       height: 1px;
-      margin: 0 auto;
+      margin: auto;
 }
 
 #btn-checked{
-      text-align: center;
       margin: 15px;
       border-radius: 3px;
       background-color: rgba(35, 71, 71, 0.418);
       width: 200px;
       height: 35px;
-
+     
 }
 
 .products-checked{
       display: flex;
-      flex-wrap: wrap;
-      flex-shrink: 2;
-      flex-direction: row;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
-      align-content: center;
-      width: 220px;
+      max-width: 650px;
       height: 50px;
-      margin: 0 auto;
+      margin: auto;
+      gap:5px;
+      text-align: center;
+}
+
+
+@media (max-width:700px){
+    .main{
+        max-width: 700px;
+    }
+    .form-products{
+        max-width:600px;
+    }
+    .header-form{
+        gap: 7px;
+        flex-wrap:wrap ;
+        max-width: 600px;
+    }
+    .header-form> h1{
+        font-size: 22px;
+    }
+    #cancel, .btn-salvar{
+        width: 80px;
+        height: 25px;
+        font-size: 13px;
+    }
+    #btn-checked{
+        width: 150px;
+        font-size: 13px;
+    }
+    .image-container>img{
+        max-height: 90px;
+        gap:5px;
+    }
+    .img-url{
+        font-size: 14px;
+        max-width: 600px;
+    }
+    input[name="name"], input[name="cost"], select{
+        font-size: 12px;
+        max-width: 250px;
+    }
+    .description{
+        max-width: 600px;
+        font-size: 14px;
+    }
+    hr{
+        max-width: 550px;
+    }
+    label{
+        font-size: 14px;
+    }
+    span{
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width:400px){
+    .main{
+        max-width: 400px;
+    }
+    .form-products{
+        max-width:330px;
+    }
+    .header-form{
+        gap: 7px;
+        flex-wrap:wrap;
+        max-width: 300px;
+    }
+    .header-form> h1{
+        font-size: 17px;
+    }
+    #cancel, .btn-salvar{
+        width: 45px;
+        height: 18px;
+        font-size: 11px;
+    }
+    #btn-checked{
+        width: 130px;
+        height: 25px;
+        font-size: 11px;
+    }
+    .image-container>img{
+        max-height: 70px;
+        gap:5px;
+      
+    }
+    .img-url{
+        font-size: 12px;
+        max-width: 300px;
+    }
+    input[name="name"], input[name="cost"], select{
+        max-width: 150px;
+        font-size: 11px;
+    }
+    .description{
+        max-width: 300px;
+    }
+    textarea{
+        font-size: 11px;
+    }
+    hr{
+        max-width: 280px;
+    }
+    label{
+        font-size: 12px;
+    }
+    span{
+        font-size: 12px;
+    }
 }

@@ -3,7 +3,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    flex-shrink: 2;
     width: 210px;
     height: 290px;
     border-radius: 5px;
@@ -60,3 +59,19 @@
     text-align: start;
 }
 
+@media (max-width:650px){
+    .product-container{
+        display: block;
+        width:180px;
+        height: 235px;
+    }
+    #details-product>h2{
+        font-size: 13px;
+    }
+    #details-product>h4{
+        font-size: 11px;
+    }
+    #details-product>p{
+        font-size: 10px;
+    }
+}

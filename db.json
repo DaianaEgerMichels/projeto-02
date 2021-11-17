@@ -46,15 +46,6 @@
       "id": 5
     },
     {
-      "url": "https://images.pexels.com/photos/6287348/pexels-photo-6287348.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "name": "Macarrão",
-      "unitCost": "5,00",
-      "description": "Massa para cozinhar",
-      "provider": "Mercado Livre",
-      "group": "Massas",
-      "id": 6
-    },
-    {
       "url": "https://images.pexels.com/photos/2619967/pexels-photo-2619967.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
       "name": "Pizza",
       "unitCost": "20,00",
@@ -80,6 +71,15 @@
       "provider": "Agricultor Familiar",
       "group": "Outra Categoria",
       "id": 9
+    },
+    {
+      "url": "https://images.pexels.com/photos/3827668/pexels-photo-3827668.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "name": "Plana de Facas",
+      "unitCost": "50,00",
+      "description": "Jogo de facas para cozinha",
+      "provider": "Shopee",
+      "group": "Utensílios",
+      "id": 10
     }
   ],
   "empresas": [

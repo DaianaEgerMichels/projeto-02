@@ -168,7 +168,7 @@ return(
             name="corporate"
             value={corporateName}
             onChange={(e) => setCorporateName(e.target.value)}
-            placeholder="Digite aqui a razão social">
+            placeholder="Razão social">
             </input>
             <span id="corporateError" className="error-msg ">Campo obrigatório!</span>
      </div>   
@@ -180,7 +180,7 @@ return(
             name="fantasy"
             value={fantasyName}
             onChange={(e) => setFantasyName(e.target.value)}
-            placeholder="Digite aqui o nome fantasia">
+            placeholder="Nome fantasia">
             </input>
             <span id="fantasyError" className="error-msg">Campo obrigatório!</span>
      </div>  
@@ -205,7 +205,7 @@ return(
             name="emailCompany"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="Digite aqui o email">
+            placeholder="example@site.com">
             </input>
             <span id="emailError" className="error-msg">Campo obrigatório!</span>
      </div>   
@@ -250,7 +250,7 @@ return(
                     name="number"
                     value={number}
                     onChange={(e) => setNumber(e.target.value)}
-                    placeholder="Digite aqui o número">
+                    placeholder="Número">
                     </input>
                     <span id="numberError" className="error-msg">Campo obrigatório!</span>
             </div>
@@ -261,7 +261,7 @@ return(
                     name="district"
                     value={district}
                     onChange={(e) => setDistrict(e.target.value)}
-                    placeholder="Digite aqui o bairro">
+                    placeholder="Bairro">
                     </input>
                     <span id="districtError" className="error-msg">Campo obrigatório!</span>
             </div>
@@ -272,7 +272,7 @@ return(
                     name="city"
                     value={city}
                     onChange={(e) => setCity(e.target.value)}
-                    placeholder="Digite aqui a cidade">
+                    placeholder="Cidade">
                     </input>
                     <span id="cityError" className="error-msg">Campo obrigatório!</span>
             </div>
@@ -303,7 +303,7 @@ return(
                 name="latitude"
                 value={latitude}
                 onChange={(e) => setLatitude(e.target.value)}
-                placeholder="Informe aqui a latitude">
+                placeholder="Latitude">
                 </input>
                 <span id="latitudeError" className="error-msg">Campo obrigatório!</span>
         </div>
@@ -315,7 +315,7 @@ return(
                 name="longitude"
                 value={longitude}
                 onChange={(e) => setLongitude(e.target.value)}
-                placeholder="Informe aqui a longitude">
+                placeholder="Longitude">
                 </input>
                 <span id="longitudeError" className="error-msg">Campo obrigatório!</span>
         </div>

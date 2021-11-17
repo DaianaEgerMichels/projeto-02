@@ -39,7 +39,7 @@ header> .header_btn{
       width: 500px;
 }
 
-/*Botoes*/
+/*Botões*/
 
 button:hover{
   background-color: rgb(36, 159, 180);
@@ -144,7 +144,7 @@ footer> h3{
   color: black;
 }
 
-/*mensagem campo obrigatório*/
+/*Mensagem campo obrigatório*/
 
 .error-msg{
   width: 350px;
@@ -179,7 +179,6 @@ input:focus{
 
 @media (max-width:800px){
   header >.header_btn{
-      display: flex;
       font-size:13px;
   }
   header{
@@ -203,6 +202,18 @@ input:focus{
     height: 25px;
     font-size: 14px;
   }
+}
+
+@media(max-width:320px){
+  header >.header_btn{
+    margin-left: 10px;
+}
+  footer> p{
+  font-size:10px;
+}
+  footer> h3{
+  font-size:22px;
+}
 }
 
 
