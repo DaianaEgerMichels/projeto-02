@@ -15,7 +15,6 @@ export default function List(){
           const result = await fetch("http://localhost:3333/produtos");
           const data = await result.json();
           setProducts(data);
-          console.log(data);
         }
             
         getProducts();
