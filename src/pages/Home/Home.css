@@ -64,10 +64,14 @@
 }
 
 @media (max-width:750px){
+    .main{
+        width:100%;
+        min-height:600px;
+    }
     .form-login{
         max-width: 350px;
-        min-height: 300px;
-        margin: 0 auto;
+        min-height: 400px;
+        margin: 10px auto;
         padding: 8px;
     }
     .form-login>h1{

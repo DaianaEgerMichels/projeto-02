@@ -10,6 +10,8 @@
 body{
   width:100%;
   height: 100vh;
+  display:flex;
+  flex-direction:column;
 }
 
 /*Header*/
@@ -189,7 +191,7 @@ input:focus{
     height:25px;
   }
   footer{
-    height: 70px;
+    height: 90px;
   }
   footer> p{
     font-size:11px;
@@ -213,6 +215,20 @@ input:focus{
 }
   footer> h3{
   font-size:22px;
+}
+  footer{
+    height: 80px;
+}
+.container-map{
+  width: 85%;
+  margin: 10px auto;
+}
+.leaflet-popup {
+	margin-bottom: 10px;
+  font-size: 10px;
+  width: 90%;
+  height: auto;
+  
 }
 }
 
