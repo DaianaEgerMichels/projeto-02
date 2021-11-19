@@ -66,11 +66,11 @@
 @media (max-width:750px){
     .main{
         width:100%;
-        min-height:600px;
+        min-height:700px;
     }
     .form-login{
         max-width: 350px;
-        min-height: 400px;
+        min-height: 450px;
         margin: 10px auto;
         padding: 8px;
     }
